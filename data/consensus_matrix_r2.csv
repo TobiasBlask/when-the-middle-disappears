@@ -1,0 +1,12 @@
+Theme,Category,Claude,GPT,Gemini,Grok,DeepSeek,Qwen,Mistral,Total,Consensus_Level,Notes
+Labor Market Bifurcation,Labor Market Displacement/Bifurcation,1,1,1,1,1,1,1,7,HC,Maintained universal consensus from R1
+Infrastructure Bottleneck,Infrastructure Bottleneck/Compute,1,1,1,1,1,1,1,7,HC,Grok adopted theme in R2; full convergence achieved
+Regulatory Divergence,Regulatory Response/Governance,1,1,1,1,1,1,1,7,HC,Qwen adopted theme in R2; full convergence achieved
+Disintermediation,Market Concentration/Platform Dynamics,1,1,1,1,1,1,1,7,HC,Grok and Mistral adopted theme in R2; full convergence achieved
+Trust Premium,Identity/Trust Transformation,1,1,1,1,1,1,1,7,HC,Grok and Qwen adopted theme in R2; full convergence achieved
+AI Feedback Concentration,Market Concentration/Platform Dynamics,1,1,1,1,1,1,1,7,HC,DeepSeek and Mistral adopted theme in R2; full convergence achieved
+Autonomous Economic Agents,Market Concentration/Platform Dynamics,1,1,1,1,1,1,1,7,HC,All non-endorsing models adopted in R2; full convergence achieved
+Compute as Currency,Infrastructure Bottleneck/Compute,1,1,1,1,1,1,1,7,HC,Claude and DeepSeek adopted in R2; full convergence achieved
+Apprenticeship Crash,Labor Market Displacement/Bifurcation,1,1,1,1,1,1,1,7,HC,All 6 non-endorsing models adopted Claude's R1 blind spot theme
+Bio-Digital Convergence,Identity/Trust Transformation,1,0,1,0,1,1,0,4,MC,Limited adoption in R2; GPT Grok and Mistral remained unconvinced
+AI Religion,Identity/Trust Transformation,1,1,1,1,1,1,0,6,HC,Strong adoption in R2; only Mistral did not endorse

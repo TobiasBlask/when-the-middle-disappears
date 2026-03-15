@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Figure 3: Geopolitical Divergence Map</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .figure-container {
+    width: 1400px;
+    background: white;
+    padding: 40px 30px 30px;
+  }
+  svg text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<div class="figure-container">
+<svg viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- ===== LEGEND ===== -->
+  <rect x="30" y="12" width="16" height="16" rx="3" fill="#3182ce"/>
+  <text x="52" y="25" font-size="11" font-weight="600" fill="#2b6cb0">US Models</text>
+  <text x="128" y="25" font-size="9" fill="#718096">(Claude, GPT-4o, Gemini, Grok)</text>
+
+  <rect x="370" y="12" width="16" height="16" rx="3" fill="#c53030"/>
+  <text x="392" y="25" font-size="11" font-weight="600" fill="#c53030">CN Models</text>
+  <text x="468" y="25" font-size="9" fill="#718096">(DeepSeek, Qwen)</text>
+
+  <rect x="620" y="12" width="16" height="16" rx="3" fill="#276749"/>
+  <text x="642" y="25" font-size="11" font-weight="600" fill="#276749">EU Model</text>
+  <text x="712" y="25" font-size="9" fill="#718096">(Mistral)</text>
+
+  <!-- Scale -->
+  <text x="1100" y="25" font-size="9" fill="#718096">Emphasis Score (0-10 scale)</text>
+  <line x1="1260" y1="20" x2="1370" y2="20" stroke="#e2e8f0" stroke-width="8" stroke-linecap="round"/>
+  <line x1="1260" y1="20" x2="1340" y2="20" stroke="#a0aec0" stroke-width="8" stroke-linecap="round"/>
+  <line x1="1260" y1="20" x2="1300" y2="20" stroke="#4a5568" stroke-width="8" stroke-linecap="round"/>
+
+  <line x1="30" y1="40" x2="1370" y2="40" stroke="#cbd5e0" stroke-width="1"/>
+
+  <!-- ===== RADAR CHART (LEFT PANEL) ===== -->
+  <text x="330" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#2d3748" letter-spacing="0.5">DIVERGENCE RADAR</text>
+
+  <!-- Radar center -->
+  <!-- cx=330, cy=340, max radius=230 -->
+
+  <!-- Concentric rings -->
+  <circle cx="330" cy="340" r="230" fill="none" stroke="#e2e8f0" stroke-width="0.8"/>
+  <circle cx="330" cy="340" r="184" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+  <circle cx="330" cy="340" r="138" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+  <circle cx="330" cy="340" r="92" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+  <circle cx="330" cy="340" r="46" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+
+  <!-- Scale labels -->
+  <text x="335" y="115" font-size="7.5" fill="#a0aec0">10</text>
+  <text x="335" y="161" font-size="7.5" fill="#a0aec0">8</text>
+  <text x="335" y="207" font-size="7.5" fill="#a0aec0">6</text>
+  <text x="335" y="253" font-size="7.5" fill="#a0aec0">4</text>
+  <text x="335" y="299" font-size="7.5" fill="#a0aec0">2</text>
+
+  <!-- 6 axes (60 deg apart) -->
+  <!-- Axis 1: Regulatory Approach (top, 270deg) -->
+  <line x1="330" y1="340" x2="330" y2="110" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="330" y="90" text-anchor="middle" font-size="10" font-weight="600" fill="#2d3748">Regulatory</text>
+  <text x="330" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#2d3748">Approach</text>
+
+  <!-- Axis 2: Market Structure (330deg -> top-right) -->
+  <!-- dx=cos(30)*230=199.2, dy=-sin(30)*230=-115 -->
+  <line x1="330" y1="340" x2="529" y2="225" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="555" y="210" font-size="10" font-weight="600" fill="#2d3748">Market</text>
+  <text x="555" y="222" font-size="10" font-weight="600" fill="#2d3748">Structure</text>
+
+  <!-- Axis 3: Labor Policy (30deg -> bottom-right) -->
+  <line x1="330" y1="340" x2="529" y2="455" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="555" y="458" font-size="10" font-weight="600" fill="#2d3748">Labor</text>
+  <text x="555" y="470" font-size="10" font-weight="600" fill="#2d3748">Policy</text>
+
+  <!-- Axis 4: Data Governance (bottom, 90deg) -->
+  <line x1="330" y1="340" x2="330" y2="570" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="330" y="590" text-anchor="middle" font-size="10" font-weight="600" fill="#2d3748">Data</text>
+  <text x="330" y="602" text-anchor="middle" font-size="10" font-weight="600" fill="#2d3748">Governance</text>
+
+  <!-- Axis 5: Innovation Paradigm (210deg -> bottom-left) -->
+  <line x1="330" y1="340" x2="131" y2="455" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="95" y="458" font-size="10" font-weight="600" fill="#2d3748">Innovation</text>
+  <text x="95" y="470" font-size="10" font-weight="600" fill="#2d3748">Paradigm</text>
+
+  <!-- Axis 6: Geopolitical Framing (150deg -> top-left) -->
+  <line x1="330" y1="340" x2="131" y2="225" stroke="#e2e8f0" stroke-width="0.8"/>
+  <text x="95" y="210" font-size="10" font-weight="600" fill="#2d3748">Geopolitical</text>
+  <text x="95" y="222" font-size="10" font-weight="600" fill="#2d3748">Framing</text>
+
+  <!-- Radar polygons -->
+  <!-- US scores: Reg=7.0, Market=8.5, Labor=7.6, Data=7.5, Innovation=8.1, Geopolitical=7.6 -->
+  <!-- CN scores: Reg=8.5, Market=8.2, Labor=8.3, Data=9.1, Innovation=8.6, Geopolitical=8.7 -->
+  <!-- EU scores: Reg=9.2, Market=7.1, Labor=8.6, Data=8.3, Innovation=7.8, Geopolitical=8.1 -->
+
+  <!-- Helper: for axis at angle a (from top, clockwise), radius r:
+       x = 330 + r*sin(a*pi/180)
+       y = 340 - r*cos(a*pi/180)
+       Axes at angles: 0(top), 60, 120, 180, 240, 300
+       Scores map to radius: score/10 * 230 -->
+
+  <!-- US polygon (scores: 7.0, 8.5, 7.6, 7.5, 8.1, 7.6) -->
+  <!-- Axis0(0deg): r=161, x=330, y=179 -->
+  <!-- Axis1(60deg): r=195.5, x=499.3, y=242.3 -->
+  <!-- Axis2(120deg): r=174.8, x=481.4, y=427.4 -->
+  <!-- Axis3(180deg): r=172.5, x=330, y=512.5 -->
+  <!-- Axis4(240deg): r=186.3, x=168.6, y=433.2 -->
+  <!-- Axis5(300deg): r=174.8, x=178.6, y=252.6 -->
+  <polygon points="330,179 499,242 481,427 330,513 169,433 179,253"
+           fill="rgba(49,130,206,0.12)" stroke="#3182ce" stroke-width="2.2"/>
+  <!-- US dots -->
+  <circle cx="330" cy="179" r="4" fill="#3182ce"/>
+  <circle cx="499" cy="242" r="4" fill="#3182ce"/>
+  <circle cx="481" cy="427" r="4" fill="#3182ce"/>
+  <circle cx="330" cy="513" r="4" fill="#3182ce"/>
+  <circle cx="169" cy="433" r="4" fill="#3182ce"/>
+  <circle cx="179" cy="253" r="4" fill="#3182ce"/>
+
+  <!-- CN polygon (scores: 8.5, 8.2, 8.3, 9.1, 8.6, 8.7) -->
+  <!-- Axis0: r=195.5, x=330, y=144.5 -->
+  <!-- Axis1: r=188.6, x=493.3, y=245.7 -->
+  <!-- Axis2: r=190.9, x=495.3, y=435.5 -->
+  <!-- Axis3: r=209.3, x=330, y=549.3 -->
+  <!-- Axis4: r=197.8, x=158.7, y=438.9 -->
+  <!-- Axis5: r=200.1, x=156.7, y=240 -->
+  <polygon points="330,145 493,246 495,436 330,549 159,439 157,240"
+           fill="rgba(197,48,48,0.10)" stroke="#c53030" stroke-width="2.2" stroke-dasharray="6,3"/>
+  <!-- CN dots -->
+  <circle cx="330" cy="145" r="4" fill="#c53030"/>
+  <circle cx="493" cy="246" r="4" fill="#c53030"/>
+  <circle cx="495" cy="436" r="4" fill="#c53030"/>
+  <circle cx="330" cy="549" r="4" fill="#c53030"/>
+  <circle cx="159" cy="439" r="4" fill="#c53030"/>
+  <circle cx="157" cy="240" r="4" fill="#c53030"/>
+
+  <!-- EU polygon (scores: 9.2, 7.1, 8.6, 8.3, 7.8, 8.1) -->
+  <!-- Axis0: r=211.6, x=330, y=128.4 -->
+  <!-- Axis1: r=163.3, x=471.4, y=258.4 -->
+  <!-- Axis2: r=197.8, x=501.3, y=438.9 -->
+  <!-- Axis3: r=190.9, x=330, y=530.9 -->
+  <!-- Axis4: r=179.4, x=174.6, y=429.7 -->
+  <!-- Axis5: r=186.3, x=168.6, y=246.8 -->
+  <polygon points="330,128 471,258 501,439 330,531 175,430 169,247"
+           fill="rgba(39,103,73,0.10)" stroke="#276749" stroke-width="2.2" stroke-dasharray="2,3"/>
+  <!-- EU dots -->
+  <circle cx="330" cy="128" r="4" fill="#276749"/>
+  <circle cx="471" cy="258" r="4" fill="#276749"/>
+  <circle cx="501" cy="439" r="4" fill="#276749"/>
+  <circle cx="330" cy="531" r="4" fill="#276749"/>
+  <circle cx="175" cy="430" r="4" fill="#276749"/>
+  <circle cx="169" cy="247" r="4" fill="#276749"/>
+
+  <!-- Score annotations on radar (selected key divergences) -->
+  <text x="340" y="175" font-size="8" fill="#3182ce" font-weight="600">7.0</text>
+  <text x="340" y="143" font-size="8" fill="#c53030" font-weight="600">8.5</text>
+  <text x="340" y="125" font-size="8" fill="#276749" font-weight="600">9.2</text>
+
+  <text x="337" y="520" font-size="8" fill="#3182ce" font-weight="600">7.5</text>
+  <text x="337" y="554" font-size="8" fill="#c53030" font-weight="600">9.1</text>
+  <text x="337" y="537" font-size="8" fill="#276749" font-weight="600">8.3</text>
+
+  <!-- ===== DIMENSION DETAIL PANELS (RIGHT) ===== -->
+  <line x1="670" y1="50" x2="670" y2="740" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="1020" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#2d3748" letter-spacing="0.5">DIMENSION DETAIL: TOP EMPHASIS PER REGION</text>
+
+  <!-- Bar chart area: x=690 to x=1370 -->
+  <!-- Each dimension block: ~110px tall -->
+
+  <!-- ===== DIM 1: REGULATORY APPROACH ===== -->
+  <rect x="690" y="80" width="680" height="100" rx="0" fill="#fafbfc"/>
+  <text x="700" y="100" font-size="11" font-weight="700" fill="#2d3748">Regulatory Approach</text>
+
+  <!-- US bar -->
+  <rect x="700" y="108" width="16" height="16" rx="2" fill="#3182ce"/>
+  <text x="722" y="121" font-size="9" fill="#4a5568">Light-touch, innovation-first, regulatory sandboxes</text>
+  <rect x="1060" y="109" width="161" height="14" rx="3" fill="#3182ce"/>
+  <text x="1228" y="120" font-size="9" fill="#2d3748" font-weight="600">7.0</text>
+
+  <!-- CN bar -->
+  <rect x="700" y="130" width="16" height="16" rx="2" fill="#c53030"/>
+  <text x="722" y="143" font-size="9" fill="#4a5568">State-directed governance, technology sovereignty mandates</text>
+  <rect x="1060" y="131" width="196" height="14" rx="3" fill="#c53030"/>
+  <text x="1262" y="142" font-size="9" fill="#2d3748" font-weight="600">8.5</text>
+
+  <!-- EU bar -->
+  <rect x="700" y="152" width="16" height="16" rx="2" fill="#276749"/>
+  <text x="722" y="165" font-size="9" fill="#4a5568">Risk-based regulation (AI Act), precautionary principle</text>
+  <rect x="1060" y="153" width="212" height="14" rx="3" fill="#276749"/>
+  <text x="1278" y="164" font-size="9" fill="#2d3748" font-weight="600">9.2</text>
+
+  <!-- ===== DIM 2: MARKET STRUCTURE ===== -->
+  <rect x="690" y="185" width="680" height="100" rx="0" fill="white"/>
+  <text x="700" y="205" font-size="11" font-weight="700" fill="#2d3748">Market Structure</text>
+
+  <rect x="700" y="213" width="16" height="16" rx="2" fill="#3182ce"/>
+  <text x="722" y="226" font-size="9" fill="#4a5568">Platform concentration, winner-take-most, creative destruction</text>
+  <rect x="1060" y="214" width="196" height="14" rx="3" fill="#3182ce"/>
+  <text x="1262" y="225" font-size="9" fill="#2d3748" font-weight="600">8.5</text>
+
+  <rect x="700" y="235" width="16" height="16" rx="2" fill="#c53030"/>
+  <text x="722" y="248" font-size="9" fill="#4a5568">National champions, state-backed consolidation, sector protection</text>
+  <rect x="1060" y="236" width="189" height="14" rx="3" fill="#c53030"/>
+  <text x="1255" y="247" font-size="9" fill="#2d3748" font-weight="600">8.2</text>
+
+  <rect x="700" y="257" width="16" height="16" rx="2" fill="#276749"/>
+  <text x="722" y="270" font-size="9" fill="#4a5568">Contestable markets, DMA interoperability, SME ecosystem</text>
+  <rect x="1060" y="258" width="163" height="14" rx="3" fill="#276749"/>
+  <text x="1229" y="269" font-size="9" fill="#2d3748" font-weight="600">7.1</text>
+
+  <!-- ===== DIM 3: LABOR POLICY ===== -->
+  <rect x="690" y="290" width="680" height="100" rx="0" fill="#fafbfc"/>
+  <text x="700" y="310" font-size="11" font-weight="700" fill="#2d3748">Labor Policy</text>
+
+  <rect x="700" y="318" width="16" height="16" rx="2" fill="#3182ce"/>
+  <text x="722" y="331" font-size="9" fill="#4a5568">Skill-based adaptation, entrepreneurial reskilling, flexibility</text>
+  <rect x="1060" y="319" width="175" height="14" rx="3" fill="#3182ce"/>
+  <text x="1241" y="330" font-size="9" fill="#2d3748" font-weight="600">7.6</text>
+
+  <rect x="700" y="340" width="16" height="16" rx="2" fill="#c53030"/>
+  <text x="722" y="353" font-size="9" fill="#4a5568">State-managed redeployment, social stability primacy</text>
+  <rect x="1060" y="341" width="191" height="14" rx="3" fill="#c53030"/>
+  <text x="1257" y="352" font-size="9" fill="#2d3748" font-weight="600">8.3</text>
+
+  <rect x="700" y="362" width="16" height="16" rx="2" fill="#276749"/>
+  <text x="722" y="375" font-size="9" fill="#4a5568">Worker protections, co-determination, just transition frameworks</text>
+  <rect x="1060" y="363" width="198" height="14" rx="3" fill="#276749"/>
+  <text x="1264" y="374" font-size="9" fill="#2d3748" font-weight="600">8.6</text>
+
+  <!-- ===== DIM 4: DATA GOVERNANCE ===== -->
+  <rect x="690" y="395" width="680" height="100" rx="0" fill="white"/>
+  <text x="700" y="415" font-size="11" font-weight="700" fill="#2d3748">Data Governance</text>
+
+  <rect x="700" y="423" width="16" height="16" rx="2" fill="#3182ce"/>
+  <text x="722" y="436" font-size="9" fill="#4a5568">Data as market asset, cross-border data flows, sectoral standards</text>
+  <rect x="1060" y="424" width="173" height="14" rx="3" fill="#3182ce"/>
+  <text x="1239" y="435" font-size="9" fill="#2d3748" font-weight="600">7.5</text>
+
+  <rect x="700" y="445" width="16" height="16" rx="2" fill="#c53030"/>
+  <text x="722" y="458" font-size="9" fill="#4a5568">Infrastructure sovereignty, data localization, state access mandates</text>
+  <rect x="1060" y="446" width="209" height="14" rx="3" fill="#c53030"/>
+  <text x="1275" y="457" font-size="9" fill="#2d3748" font-weight="600">9.1</text>
+
+  <rect x="700" y="467" width="16" height="16" rx="2" fill="#276749"/>
+  <text x="722" y="480" font-size="9" fill="#4a5568">GDPR-anchored rights, data portability, digital commons</text>
+  <rect x="1060" y="468" width="191" height="14" rx="3" fill="#276749"/>
+  <text x="1257" y="479" font-size="9" fill="#2d3748" font-weight="600">8.3</text>
+
+  <!-- ===== DIM 5: INNOVATION PARADIGM ===== -->
+  <rect x="690" y="500" width="680" height="100" rx="0" fill="#fafbfc"/>
+  <text x="700" y="520" font-size="11" font-weight="700" fill="#2d3748">Innovation Paradigm</text>
+
+  <rect x="700" y="528" width="16" height="16" rx="2" fill="#3182ce"/>
+  <text x="722" y="541" font-size="9" fill="#4a5568">Market-driven disruption, VC ecosystem, open-source acceleration</text>
+  <rect x="1060" y="529" width="186" height="14" rx="3" fill="#3182ce"/>
+  <text x="1252" y="540" font-size="9" fill="#2d3748" font-weight="600">8.1</text>
+
+  <rect x="700" y="550" width="16" height="16" rx="2" fill="#c53030"/>
+  <text x="722" y="563" font-size="9" fill="#4a5568">State-steered industrial policy, public-private fusion</text>
+  <rect x="1060" y="551" width="198" height="14" rx="3" fill="#c53030"/>
+  <text x="1264" y="562" font-size="9" fill="#2d3748" font-weight="600">8.6</text>
+
+  <rect x="700" y="572" width="16" height="16" rx="2" fill="#276749"/>
+  <text x="722" y="585" font-size="9" fill="#4a5568">Mission-oriented R&amp;D, responsible innovation, trustworthy AI</text>
+  <rect x="1060" y="573" width="180" height="14" rx="3" fill="#276749"/>
+  <text x="1246" y="584" font-size="9" fill="#2d3748" font-weight="600">7.8</text>
+
+  <!-- ===== DIM 6: GEOPOLITICAL FRAMING ===== -->
+  <rect x="690" y="605" width="680" height="100" rx="0" fill="white"/>
+  <text x="700" y="625" font-size="11" font-weight="700" fill="#2d3748">Geopolitical Framing</text>
+
+  <rect x="700" y="633" width="16" height="16" rx="2" fill="#3182ce"/>
+  <text x="722" y="646" font-size="9" fill="#4a5568">Tech hegemony, export controls as leverage, allied tech blocs</text>
+  <rect x="1060" y="634" width="175" height="14" rx="3" fill="#3182ce"/>
+  <text x="1241" y="645" font-size="9" fill="#2d3748" font-weight="600">7.6</text>
+
+  <rect x="700" y="655" width="16" height="16" rx="2" fill="#c53030"/>
+  <text x="722" y="668" font-size="9" fill="#4a5568">Techno-nationalist self-reliance, compute sovereignty, BRI digital</text>
+  <rect x="1060" y="656" width="200" height="14" rx="3" fill="#c53030"/>
+  <text x="1266" y="667" font-size="9" fill="#2d3748" font-weight="600">8.7</text>
+
+  <rect x="700" y="677" width="16" height="16" rx="2" fill="#276749"/>
+  <text x="722" y="690" font-size="9" fill="#4a5568">Strategic autonomy, multilateral governance, normative power</text>
+  <rect x="1060" y="678" width="186" height="14" rx="3" fill="#276749"/>
+  <text x="1252" y="689" font-size="9" fill="#2d3748" font-weight="600">8.1</text>
+
+  <!-- ===== SUMMARY BAR ===== -->
+  <line x1="30" y1="720" x2="1370" y2="720" stroke="#cbd5e0" stroke-width="1.5"/>
+
+  <rect x="30" y="730" width="1340" height="35" rx="5" fill="#f7fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="45" y="752" font-size="10" font-weight="700" fill="#4a5568">DOMINANT NARRATIVE</text>
+
+  <rect x="290" y="737" width="280" height="22" rx="4" fill="#ebf4ff" stroke="#90cdf4" stroke-width="0.8"/>
+  <text x="430" y="752" text-anchor="middle" font-size="9" font-weight="600" fill="#2b6cb0">Market-driven disruption &amp; platform power</text>
+
+  <rect x="600" y="737" width="310" height="22" rx="4" fill="#fff5f5" stroke="#feb2b2" stroke-width="0.8"/>
+  <text x="755" y="752" text-anchor="middle" font-size="9" font-weight="600" fill="#c53030">State-steered sovereignty &amp; national champions</text>
+
+  <rect x="940" y="737" width="300" height="22" rx="4" fill="#f0fff4" stroke="#9ae6b4" stroke-width="0.8"/>
+  <text x="1090" y="752" text-anchor="middle" font-size="9" font-weight="600" fill="#276749">Rights-based regulation &amp; social equity</text>
+
+  <!-- ===== CAPTION ===== -->
+  <text x="30" y="790" font-size="10" fill="#4a5568">
+    <tspan font-weight="700">Figure 3.</tspan>
+    <tspan> Geopolitical Divergence Map. Left panel: radar chart showing composite emphasis scores (0-10) across six policy dimensions for US-origin</tspan>
+  </text>
+  <text x="30" y="805" font-size="10" fill="#4a5568">models (n=4, solid blue), CN-origin models (n=2, dashed red), and the EU-origin model (n=1, dotted green). Right panel: dimension-level detail with</text>
+  <text x="30" y="820" font-size="10" fill="#4a5568">qualitative emphasis descriptors. Largest divergences appear in Regulatory Approach (EU highest), Data Governance (CN highest), and Market Structure (US highest).</text>
+
+</svg>
+</div>
+</body>
+</html>

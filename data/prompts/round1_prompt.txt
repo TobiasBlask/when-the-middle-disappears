@@ -1,0 +1,16 @@
+ROUND 1 PROMPT
+==============
+
+Full prompt text available in supplementary materials (Appendix A of the paper).
+
+Summary: In Round 1, each LLM was asked to provide an independent analysis of
+AI-driven economic transformation over a 5-10 year horizon. Models were prompted
+to identify key trends, disruptions, and structural shifts across labor markets,
+market dynamics, governance, infrastructure, geopolitics, and society. No prior
+themes or categories were provided; models generated predictions de novo.
+
+Models queried: Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro, Grok-2, DeepSeek-V3,
+Qwen 2.5 72B, Mistral Large 2.
+
+All models were queried via their respective APIs with default temperature settings.
+Each model received the identical prompt text.

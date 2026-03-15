@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# OS files
+Thumbs.db

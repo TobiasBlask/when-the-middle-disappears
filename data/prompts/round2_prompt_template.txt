@@ -1,0 +1,20 @@
+ROUND 2 PROMPT TEMPLATE
+=======================
+
+Full prompt text available in supplementary materials (Appendix B of the paper).
+
+Structure: In Round 2, each LLM received a structured summary of ALL Round 1
+responses (anonymized by model) and was asked to:
+
+1. Review the synthesized themes identified across all panelists in Round 1.
+2. Indicate which themes it endorses, rejects, or wishes to modify.
+3. Identify any themes it considers missing or underweighted.
+4. Provide a revised analysis integrating insights from the collective Round 1 output.
+
+The Round 2 prompt included:
+- A neutral summary of all 11 themes identified in Round 1 coding
+- The consensus level for each theme (without revealing which models endorsed which)
+- Instructions to critically evaluate rather than simply defer to majority opinion
+
+Each model received the same Round 2 prompt with identical theme summaries.
+Temperature settings remained at defaults for all models.

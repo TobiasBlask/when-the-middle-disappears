@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Figure 4: Three-Order Effect Cascade</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .figure-container {
+    width: 1400px;
+    background: white;
+    padding: 40px 30px 30px;
+  }
+  svg text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<div class="figure-container">
+<svg viewBox="0 0 1400 920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a5568"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3182ce"/>
+    </marker>
+    <marker id="arrowhead-dark" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2d3748"/>
+    </marker>
+    <marker id="arrow-down" markerWidth="12" markerHeight="8" refX="6" refY="8" orient="0">
+      <polygon points="0 0, 12 0, 6 8" fill="#4a5568"/>
+    </marker>
+    <marker id="arrow-feedback" markerWidth="8" markerHeight="6" refX="4" refY="0" orient="0">
+      <polygon points="0 6, 8 6, 4 0" fill="#e53e3e" opacity="0.6"/>
+    </marker>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ebf8ff"/>
+      <stop offset="100%" style="stop-color:#bee3f8"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ebf4ff"/>
+      <stop offset="100%" style="stop-color:#90cdf4"/>
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#edf2f7"/>
+      <stop offset="100%" style="stop-color:#a0aec0"/>
+    </linearGradient>
+    <linearGradient id="consensusGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c5282"/>
+      <stop offset="100%" style="stop-color:#cbd5e0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="700" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="#4a5568" letter-spacing="1">THREE-ORDER EFFECT CASCADE ACROSS EIGHT INDUSTRY VERTICALS</text>
+  <line x1="30" y1="38" x2="1370" y2="38" stroke="#cbd5e0" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- FIRST ORDER -->
+  <!-- ============================================================ -->
+
+  <!-- Order label sidebar -->
+  <rect x="30" y="52" width="48" height="230" rx="6" fill="#bee3f8"/>
+  <text x="54" y="180" text-anchor="middle" font-size="14" font-weight="700" fill="#2c5282" transform="rotate(-90, 54, 180)">1st ORDER</text>
+
+  <!-- Main container -->
+  <rect x="90" y="52" width="1280" height="230" rx="8" fill="url(#grad1)" stroke="#63b3ed" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Header bar -->
+  <rect x="90" y="52" width="1280" height="36" rx="8" fill="#63b3ed"/>
+  <rect x="90" y="70" width="1280" height="18" fill="#63b3ed"/>
+  <text x="110" y="76" font-size="14" font-weight="700" fill="white">Direct / Task-Level Effects</text>
+  <text x="460" y="76" font-size="11" fill="rgba(255,255,255,0.85)">Task automation, productivity gains, AI-assisted workflows</text>
+  <rect x="1200" y="58" width="155" height="22" rx="4" fill="rgba(255,255,255,0.25)"/>
+  <text x="1277" y="74" text-anchor="middle" font-size="10" font-weight="600" fill="white">CONSENSUS: HIGH</text>
+
+  <!-- Core mechanism -->
+  <text x="110" y="110" font-size="11" font-weight="600" fill="#2d3748">Core Mechanism</text>
+  <text x="110" y="127" font-size="10" fill="#4a5568">AI substitutes routine cognitive tasks: structured information processing, first-draft synthesis, scheduling, triage, reporting, and routine analysis.</text>
+
+  <!-- 8 vertical examples -->
+  <text x="110" y="152" font-size="10" font-weight="600" fill="#2d3748">Industry Vertical Examples</text>
+
+  <!-- Row 1 of pills -->
+  <rect x="110" y="160" width="155" height="26" rx="5" fill="white" stroke="#90cdf4" stroke-width="0.8" filter="url(#shadow)"/>
+  <text x="118" y="172" font-size="7.5" font-weight="700" fill="#2c5282">IT</text>
+  <text x="132" y="177" font-size="8.5" fill="#4a5568">AI coding assistants</text>
+
+  <rect x="275" y="160" width="175" height="26" rx="5" fill="white" stroke="#90cdf4" stroke-width="0.8" filter="url(#shadow)"/>
+  <text x="283" y="172" font-size="7.5" font-weight="700" fill="#2c5282">HEALTH</text>
+  <text x="316" y="177" font-size="8.5" fill="#4a5568">AI-assisted radiology</text>
+
+  <rect x="460" y="160" width="175" height="26" rx="5" fill="white" stroke="#90cdf4" stroke-width="0.8" filter="url(#shadow)"/>
+  <text x="468" y="172" font-size="7.5" font-weight="700" fill="#2c5282">FINANCE</text>
+  <text x="508" y="177" font-size="8.5" fill="#4a5568">Automated compliance</text>
+
+  <rect x="645" y="160" width="185" height="26" rx="5" fill="white" stroke="#90cdf4" stroke-width="0.8" filter="url(#shadow)"/>
+  <text x="653" y="172" font-size="7.5" font-weight="700" fill="#2c5282">ENERGY</text>
+  <text x="689" y="177" font-size="8.5" fill="#4a5568">Predictive grid optimization</text>
+
+  <!-- Row 2 of pills -->
+  <rect x="110" y="194" width="185" height="26" rx="5" fill="white" stroke="#90cdf4" stroke-width="0.8" filter="url(#shadow)"/>
+  <text x="118" y="206" font-size="7.5" font-weight="700" fill="#2c5282">INDUSTRIAL</text>
+  <text x="165" y="211" font-size="8.5" fill="#4a5568">Autonomous quality control</text>
+
+  <rect x="305" y="194" width="165" height="26" rx="5" fill="white" stroke="#90cdf4" stroke-width="0.8" filter="url(#shadow)"/>
+  <text x="313" y="206" font-size="7.5" font-weight="700" fill="#2c5282">CONSUMER</text>
+  <text x="357" y="211" font-size="8.5" fill="#4a5568">Personalized marketing</text>
+
+  <rect x="480" y="194" width="195" height="26" rx="5" fill="white" stroke="#90cdf4" stroke-width="0.8" filter="url(#shadow)"/>
+  <text x="488" y="206" font-size="7.5" font-weight="700" fill="#2c5282">COMMS</text>
+  <text x="522" y="211" font-size="8.5" fill="#4a5568">AI-generated content at scale</text>
+
+  <rect x="685" y="194" width="175" height="26" rx="5" fill="white" stroke="#90cdf4" stroke-width="0.8" filter="url(#shadow)"/>
+  <text x="693" y="206" font-size="7.5" font-weight="700" fill="#2c5282">REAL EST.</text>
+  <text x="737" y="211" font-size="8.5" fill="#4a5568">Automated valuations</text>
+
+  <!-- Key prediction box -->
+  <rect x="920" y="145" width="430" height="120" rx="6" fill="white" stroke="#90cdf4" stroke-width="1"/>
+  <text x="940" y="166" font-size="10" font-weight="700" fill="#2c5282">Key 1st-Order Predictions</text>
+  <line x1="940" y1="173" x2="1330" y2="173" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="940" y="190" font-size="9.5" fill="#4a5568">30-50% of routine cognitive tasks automatable by 2028</text>
+  <text x="940" y="206" font-size="9.5" fill="#4a5568">10-25x productivity gains in code generation</text>
+  <text x="940" y="222" font-size="9.5" fill="#4a5568">Professional services: 40-60% time savings on drafting</text>
+  <text x="940" y="238" font-size="9.5" fill="#4a5568">Healthcare diagnostics: AI matches specialist accuracy</text>
+  <text x="940" y="254" font-size="9.5" fill="#718096" font-style="italic">High consensus across all 7 models</text>
+
+  <!-- ============================================================ -->
+  <!-- CASCADE ARROWS 1 to 2 -->
+  <!-- ============================================================ -->
+  <!-- Multiple arrows showing cascade paths -->
+  <line x1="250" y1="286" x2="250" y2="324" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow-down)"/>
+  <line x1="500" y1="286" x2="500" y2="324" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow-down)"/>
+  <line x1="750" y1="286" x2="750" y2="324" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow-down)"/>
+  <line x1="1000" y1="286" x2="1000" y2="324" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow-down)"/>
+  <text x="1100" y="310" font-size="9.5" fill="#718096" font-style="italic">task-level changes accumulate...</text>
+
+  <!-- ============================================================ -->
+  <!-- SECOND ORDER -->
+  <!-- ============================================================ -->
+
+  <rect x="30" y="335" width="48" height="240" rx="6" fill="#90cdf4"/>
+  <text x="54" y="468" text-anchor="middle" font-size="14" font-weight="700" fill="#1a365d" transform="rotate(-90, 54, 468)">2nd ORDER</text>
+
+  <rect x="90" y="335" width="1280" height="240" rx="8" fill="url(#grad2)" stroke="#3182ce" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <rect x="90" y="335" width="1280" height="36" rx="8" fill="#3182ce"/>
+  <rect x="90" y="353" width="1280" height="18" fill="#3182ce"/>
+  <text x="110" y="359" font-size="14" font-weight="700" fill="white">Structural / Organizational Effects</text>
+  <text x="485" y="359" font-size="11" fill="rgba(255,255,255,0.85)">Value chain reorganization, business model disruption, labor market bifurcation</text>
+  <rect x="1140" y="341" width="215" height="22" rx="4" fill="rgba(255,255,255,0.25)"/>
+  <text x="1247" y="357" text-anchor="middle" font-size="10" font-weight="600" fill="white">CONSENSUS: MODERATE-HIGH</text>
+
+  <!-- Three main structural effects -->
+  <rect x="110" y="385" width="380" height="80" rx="6" fill="white" stroke="#3182ce" stroke-width="1" filter="url(#shadow)"/>
+  <text x="130" y="405" font-size="11" font-weight="700" fill="#2c5282">Value Chain Reorganization</text>
+  <text x="130" y="422" font-size="9.5" fill="#4a5568">Disintermediation of middlemen across</text>
+  <text x="130" y="437" font-size="9.5" fill="#4a5568">all verticals. AI enables direct producer-</text>
+  <text x="130" y="452" font-size="9.5" fill="#4a5568">consumer connections at scale.</text>
+
+  <rect x="510" y="385" width="380" height="80" rx="6" fill="white" stroke="#3182ce" stroke-width="1" filter="url(#shadow)"/>
+  <text x="530" y="405" font-size="11" font-weight="700" fill="#2c5282">Business Model Disruption</text>
+  <text x="530" y="422" font-size="9.5" fill="#4a5568">Winner-take-most dynamics accelerate.</text>
+  <text x="530" y="437" font-size="9.5" fill="#4a5568">Organizational flattening eliminates</text>
+  <text x="530" y="452" font-size="9.5" fill="#4a5568">middle management layers.</text>
+
+  <rect x="910" y="385" width="440" height="80" rx="6" fill="white" stroke="#3182ce" stroke-width="1" filter="url(#shadow)"/>
+  <text x="930" y="405" font-size="11" font-weight="700" fill="#2c5282">Labor Market Bifurcation</text>
+  <text x="930" y="422" font-size="9.5" fill="#4a5568">Barbell pattern: premium on high-judgment</text>
+  <text x="930" y="437" font-size="9.5" fill="#4a5568">roles + physical/care work; hollowing of</text>
+  <text x="930" y="452" font-size="9.5" fill="#4a5568">middle-skill cognitive labor. Apprenticeship crisis.</text>
+
+  <!-- Arrows between the three boxes -->
+  <line x1="490" y1="425" x2="510" y2="425" stroke="#3182ce" stroke-width="1" marker-end="url(#arrowhead-blue)"/>
+  <line x1="890" y1="425" x2="910" y2="425" stroke="#3182ce" stroke-width="1" marker-end="url(#arrowhead-blue)"/>
+
+  <!-- Vertical examples for 2nd order -->
+  <text x="110" y="485" font-size="10" font-weight="600" fill="#2d3748">Industry Vertical Examples</text>
+
+  <rect x="110" y="493" width="150" height="26" rx="5" fill="white" stroke="#3182ce" stroke-width="0.8"/>
+  <text x="118" y="505" font-size="7.5" font-weight="700" fill="#2c5282">IT</text>
+  <text x="130" y="510" font-size="8.5" fill="#4a5568">Platform consolidation</text>
+
+  <rect x="270" y="493" width="170" height="26" rx="5" fill="white" stroke="#3182ce" stroke-width="0.8"/>
+  <text x="278" y="505" font-size="7.5" font-weight="700" fill="#2c5282">HEALTH</text>
+  <text x="311" y="510" font-size="8.5" fill="#4a5568">Hospital network mergers</text>
+
+  <rect x="450" y="493" width="170" height="26" rx="5" fill="white" stroke="#3182ce" stroke-width="0.8"/>
+  <text x="458" y="505" font-size="7.5" font-weight="700" fill="#2c5282">FINANCE</text>
+  <text x="498" y="510" font-size="8.5" fill="#4a5568">Robo-advisory displaces</text>
+
+  <rect x="630" y="493" width="170" height="26" rx="5" fill="white" stroke="#3182ce" stroke-width="0.8"/>
+  <text x="638" y="505" font-size="7.5" font-weight="700" fill="#2c5282">ENERGY</text>
+  <text x="674" y="510" font-size="8.5" fill="#4a5568">Decentralized micro-grids</text>
+
+  <rect x="810" y="493" width="165" height="26" rx="5" fill="white" stroke="#3182ce" stroke-width="0.8"/>
+  <text x="818" y="505" font-size="7.5" font-weight="700" fill="#2c5282">INDUSTRIAL</text>
+  <text x="863" y="510" font-size="8.5" fill="#4a5568">Lights-out factories</text>
+
+  <rect x="985" y="493" width="155" height="26" rx="5" fill="white" stroke="#3182ce" stroke-width="0.8"/>
+  <text x="993" y="505" font-size="7.5" font-weight="700" fill="#2c5282">CONSUMER</text>
+  <text x="1037" y="510" font-size="8.5" fill="#4a5568">DTC brand explosion</text>
+
+  <rect x="1150" y="493" width="200" height="26" rx="5" fill="white" stroke="#3182ce" stroke-width="0.8"/>
+  <text x="1158" y="505" font-size="7.5" font-weight="700" fill="#2c5282">COMMS / RE</text>
+  <text x="1210" y="510" font-size="8.5" fill="#4a5568">Creator economy collapse</text>
+
+  <!-- Trust/authenticity badge -->
+  <rect x="110" y="530" width="250" height="24" rx="12" fill="#ebf8ff" stroke="#3182ce" stroke-width="0.8"/>
+  <text x="235" y="546" text-anchor="middle" font-size="9" fill="#2c5282" font-weight="600">Cross-cutting: Trust / Authenticity Premium emerges</text>
+
+  <!-- ============================================================ -->
+  <!-- CASCADE ARROWS 2 to 3 -->
+  <!-- ============================================================ -->
+  <line x1="250" y1="579" x2="250" y2="617" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow-down)"/>
+  <line x1="500" y1="579" x2="500" y2="617" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow-down)"/>
+  <line x1="750" y1="579" x2="750" y2="617" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow-down)"/>
+  <line x1="1000" y1="579" x2="1000" y2="617" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow-down)"/>
+  <text x="1100" y="603" font-size="9.5" fill="#718096" font-style="italic">structural changes compound...</text>
+
+  <!-- ============================================================ -->
+  <!-- THIRD ORDER -->
+  <!-- ============================================================ -->
+
+  <rect x="30" y="628" width="48" height="240" rx="6" fill="#4a5568"/>
+  <text x="54" y="761" text-anchor="middle" font-size="14" font-weight="700" fill="white" transform="rotate(-90, 54, 761)">3rd ORDER</text>
+
+  <rect x="90" y="628" width="1280" height="240" rx="8" fill="url(#grad3)" stroke="#4a5568" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <rect x="90" y="628" width="1280" height="36" rx="8" fill="#4a5568"/>
+  <rect x="90" y="646" width="1280" height="18" fill="#4a5568"/>
+  <text x="110" y="652" font-size="14" font-weight="700" fill="white">Systemic / Societal Effects</text>
+  <text x="435" y="652" font-size="11" fill="rgba(255,255,255,0.85)">Geopolitical power shifts, regulatory regime changes, social contract renegotiation</text>
+  <rect x="1130" y="634" width="225" height="22" rx="4" fill="rgba(255,255,255,0.25)"/>
+  <text x="1242" y="650" text-anchor="middle" font-size="10" font-weight="600" fill="white">CONSENSUS: LOW (divergent)</text>
+
+  <!-- Three systemic effect boxes -->
+  <rect x="110" y="678" width="380" height="80" rx="6" fill="white" stroke="#4a5568" stroke-width="1" filter="url(#shadow)"/>
+  <text x="130" y="698" font-size="11" font-weight="700" fill="#2d3748">Geopolitical Power Shifts</text>
+  <text x="130" y="715" font-size="9.5" fill="#4a5568">Compute as currency. AI capability becomes</text>
+  <text x="130" y="730" font-size="9.5" fill="#4a5568">primary axis of geopolitical competition.</text>
+  <text x="130" y="745" font-size="9.5" fill="#4a5568">Splinternet fragmentation accelerates.</text>
+
+  <rect x="510" y="678" width="380" height="80" rx="6" fill="white" stroke="#4a5568" stroke-width="1" filter="url(#shadow)"/>
+  <text x="530" y="698" font-size="11" font-weight="700" fill="#2d3748">Regulatory Regime Changes</text>
+  <text x="530" y="715" font-size="9.5" fill="#4a5568">Three-track regulatory divergence hardens:</text>
+  <text x="530" y="730" font-size="9.5" fill="#4a5568">US light-touch vs. CN state-directed vs.</text>
+  <text x="530" y="745" font-size="9.5" fill="#4a5568">EU rights-based. Creates compliance barriers.</text>
+
+  <rect x="910" y="678" width="440" height="80" rx="6" fill="white" stroke="#4a5568" stroke-width="1" filter="url(#shadow)"/>
+  <text x="930" y="698" font-size="11" font-weight="700" fill="#2d3748">Social Contract Renegotiation</text>
+  <text x="930" y="715" font-size="9.5" fill="#4a5568">Post-labor political economy. UBI debates</text>
+  <text x="930" y="730" font-size="9.5" fill="#4a5568">intensify. Wealth concentration triggers</text>
+  <text x="930" y="745" font-size="9.5" fill="#4a5568">redistributive pressure. New social movements.</text>
+
+  <line x1="490" y1="718" x2="510" y2="718" stroke="#4a5568" stroke-width="1" marker-end="url(#arrowhead-dark)"/>
+  <line x1="890" y1="718" x2="910" y2="718" stroke="#4a5568" stroke-width="1" marker-end="url(#arrowhead-dark)"/>
+
+  <!-- Vertical examples for 3rd order -->
+  <text x="110" y="778" font-size="10" font-weight="600" fill="#2d3748">Industry Vertical Examples</text>
+
+  <rect x="110" y="786" width="155" height="26" rx="5" fill="white" stroke="#718096" stroke-width="0.8"/>
+  <text x="118" y="798" font-size="7.5" font-weight="700" fill="#4a5568">IT</text>
+  <text x="130" y="803" font-size="8.5" fill="#4a5568">Tech sovereignty blocs</text>
+
+  <rect x="275" y="786" width="175" height="26" rx="5" fill="white" stroke="#718096" stroke-width="0.8"/>
+  <text x="283" y="798" font-size="7.5" font-weight="700" fill="#4a5568">HEALTH</text>
+  <text x="316" y="803" font-size="8.5" fill="#4a5568">Regulatory health schisms</text>
+
+  <rect x="460" y="786" width="165" height="26" rx="5" fill="white" stroke="#718096" stroke-width="0.8"/>
+  <text x="468" y="798" font-size="7.5" font-weight="700" fill="#4a5568">FINANCE</text>
+  <text x="508" y="803" font-size="8.5" fill="#4a5568">Monetary system shifts</text>
+
+  <rect x="635" y="786" width="170" height="26" rx="5" fill="white" stroke="#718096" stroke-width="0.8"/>
+  <text x="643" y="798" font-size="7.5" font-weight="700" fill="#4a5568">ENERGY</text>
+  <text x="679" y="803" font-size="8.5" fill="#4a5568">Energy geopolitics reorder</text>
+
+  <rect x="815" y="786" width="160" height="26" rx="5" fill="white" stroke="#718096" stroke-width="0.8"/>
+  <text x="823" y="798" font-size="7.5" font-weight="700" fill="#4a5568">INDUSTRIAL</text>
+  <text x="868" y="803" font-size="8.5" fill="#4a5568">Reshoring mandates</text>
+
+  <rect x="985" y="786" width="155" height="26" rx="5" fill="white" stroke="#718096" stroke-width="0.8"/>
+  <text x="993" y="798" font-size="7.5" font-weight="700" fill="#4a5568">CONSUMER</text>
+  <text x="1037" y="803" font-size="8.5" fill="#4a5568">Post-scarcity debates</text>
+
+  <rect x="1150" y="786" width="200" height="26" rx="5" fill="white" stroke="#718096" stroke-width="0.8"/>
+  <text x="1158" y="798" font-size="7.5" font-weight="700" fill="#4a5568">COMMS / RE</text>
+  <text x="1210" y="803" font-size="8.5" fill="#4a5568">Digital public sphere crisis</text>
+
+  <!-- Geopolitical divergence badge -->
+  <rect x="110" y="823" width="340" height="24" rx="12" fill="#edf2f7" stroke="#4a5568" stroke-width="0.8"/>
+  <text x="280" y="839" text-anchor="middle" font-size="9" fill="#4a5568" font-weight="600">Greatest divergence: US/CN/EU models project distinct systemic outcomes</text>
+
+  <!-- ============================================================ -->
+  <!-- FEEDBACK LOOP ARROW (right side) -->
+  <!-- ============================================================ -->
+  <path d="M 1380 800 Q 1395 800 1395 650 Q 1395 400 1395 200 Q 1395 130 1380 130"
+        fill="none" stroke="#e53e3e" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.5"
+        marker-end="url(#arrow-feedback)"/>
+  <text x="1390" y="460" font-size="9" fill="#e53e3e" opacity="0.65" transform="rotate(-90, 1390, 460)">Feedback loops reshape lower orders</text>
+
+  <!-- ============================================================ -->
+  <!-- CONSENSUS GRADIENT BAR -->
+  <!-- ============================================================ -->
+  <rect x="30" y="875" width="1340" height="30" rx="5" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="45" y="895" font-size="9.5" font-weight="700" fill="#4a5568">CONSENSUS GRADIENT</text>
+  <rect x="220" y="885" width="380" height="12" rx="3" fill="url(#consensusGrad)"/>
+  <text x="230" y="894" font-size="8" fill="white" font-weight="600">HIGH (1st order)</text>
+  <text x="502" y="894" font-size="8" fill="#718096" font-weight="600">LOW (3rd order)</text>
+  <text x="640" y="895" font-size="9.5" fill="#718096">Higher-order effects exhibit greater model divergence, consistent with general prediction theory.</text>
+
+  <!-- ============================================================ -->
+  <!-- CAPTION -->
+  <!-- ============================================================ -->
+  <text x="30" y="930" font-size="10" fill="#4a5568">
+    <tspan font-weight="700">Figure 4.</tspan>
+    <tspan> Three-Order Effect Cascade. First-order effects (task automation) cascade into second-order structural reorganization (value chain disruption, labor</tspan>
+  </text>
+  <text x="30" y="945" font-size="10" fill="#4a5568">bifurcation) and third-order systemic transformation (geopolitical power shifts, regulatory regime changes, social contract renegotiation). Examples drawn from</text>
+  <text x="30" y="960" font-size="10" fill="#4a5568">eight GICS industry verticals. Inter-model consensus decreases at higher orders. Red dashed line indicates feedback loops from systemic to task-level effects.</text>
+
+</svg>
+</div>
+</body>
+</html>

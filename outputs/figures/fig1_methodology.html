@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Figure 1: Multi-LLM Delphi Research Design</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .figure-container {
+    width: 1400px;
+    background: white;
+    padding: 40px 30px 30px;
+  }
+  svg text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<div class="figure-container">
+<svg viewBox="0 0 1400 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a5568"/>
+    </marker>
+    <marker id="arrowhead-white" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#718096"/>
+    </marker>
+    <linearGradient id="promptGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e2e8f0"/>
+      <stop offset="100%" style="stop-color:#cbd5e0"/>
+    </linearGradient>
+    <linearGradient id="corpusGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ebf4ff"/>
+      <stop offset="100%" style="stop-color:#c3dafe"/>
+    </linearGradient>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Phase labels at top -->
+  <text x="75" y="25" text-anchor="middle" font-size="11" fill="#718096" font-weight="600" letter-spacing="1">INPUT</text>
+  <text x="340" y="25" text-anchor="middle" font-size="11" fill="#718096" font-weight="600" letter-spacing="1">PANEL</text>
+  <text x="570" y="25" text-anchor="middle" font-size="11" fill="#718096" font-weight="600" letter-spacing="1">CORPUS</text>
+  <text x="890" y="25" text-anchor="middle" font-size="11" fill="#718096" font-weight="600" letter-spacing="1">ANALYTICAL PROCEDURE</text>
+  <text x="1270" y="25" text-anchor="middle" font-size="11" fill="#718096" font-weight="600" letter-spacing="1">RESULTS</text>
+
+  <!-- Thin separator line -->
+  <line x1="20" y1="35" x2="1380" y2="35" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- ===== PROMPT INSTRUMENT ===== -->
+  <rect x="15" y="55" width="120" height="400" rx="6" fill="url(#promptGrad)" stroke="#a0aec0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="75" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="#2d3748">Structured</text>
+  <text x="75" y="96" text-anchor="middle" font-size="12" font-weight="700" fill="#2d3748">Prompt</text>
+  <text x="75" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#2d3748">Instrument</text>
+
+  <line x1="35" y1="122" x2="115" y2="122" stroke="#a0aec0" stroke-width="0.5"/>
+
+  <text x="75" y="142" text-anchor="middle" font-size="9.5" fill="#4a5568">Role framing</text>
+  <text x="75" y="168" text-anchor="middle" font-size="9.5" fill="#4a5568">3 Scenarios</text>
+  <text x="75" y="182" text-anchor="middle" font-size="8.5" fill="#718096">(MILD / BASE / MAX)</text>
+  <text x="75" y="208" text-anchor="middle" font-size="9.5" fill="#4a5568">4 Adoption Stages</text>
+  <text x="75" y="234" text-anchor="middle" font-size="9.5" fill="#4a5568">8 GICS Verticals</text>
+  <text x="75" y="260" text-anchor="middle" font-size="9.5" fill="#4a5568">3 Effect Orders</text>
+  <text x="75" y="290" text-anchor="middle" font-size="9.5" fill="#4a5568">Cross-cutting</text>
+  <text x="75" y="304" text-anchor="middle" font-size="9.5" fill="#4a5568">analysis</text>
+
+  <rect x="30" y="330" width="90" height="50" rx="4" fill="white" stroke="#a0aec0" stroke-width="0.8"/>
+  <text x="75" y="350" text-anchor="middle" font-size="9" fill="#4a5568" font-style="italic">576-cell</text>
+  <text x="75" y="364" text-anchor="middle" font-size="9" fill="#4a5568" font-style="italic">analytical matrix</text>
+
+  <text x="75" y="410" text-anchor="middle" font-size="8.5" fill="#718096">8 x 4 x 3 x 3</text>
+  <text x="75" y="424" text-anchor="middle" font-size="8.5" fill="#718096">+ cross-cutting</text>
+
+  <!-- Arrow from prompt to models -->
+  <line x1="140" y1="255" x2="185" y2="255" stroke="#4a5568" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="162" y="248" text-anchor="middle" font-size="8" fill="#718096">identical</text>
+  <text x="162" y="258" text-anchor="middle" font-size="8" fill="#718096">prompt</text>
+
+  <!-- ===== 7 LLMs ===== -->
+  <!-- US Models (blue tones) -->
+  <rect x="195" y="55" width="290" height="400" rx="6" fill="white" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- US label -->
+  <rect x="205" y="62" width="165" height="22" rx="3" fill="#ebf4ff" stroke="#90cdf4" stroke-width="0.8"/>
+  <text x="215" y="77" font-size="10" font-weight="600" fill="#2b6cb0">US</text>
+  <text x="235" y="77" font-size="9" fill="#4a90b8">4 models</text>
+
+  <!-- US model boxes -->
+  <rect x="210" y="92" width="125" height="52" rx="4" fill="#ebf8ff" stroke="#90cdf4" stroke-width="1" filter="url(#shadow)"/>
+  <text x="272" y="112" text-anchor="middle" font-size="10.5" font-weight="600" fill="#2c5282">Claude</text>
+  <text x="272" y="126" text-anchor="middle" font-size="8.5" fill="#4a90b8">Anthropic</text>
+  <text x="272" y="138" text-anchor="middle" font-size="8" fill="#718096">30,613 words</text>
+
+  <rect x="345" y="92" width="125" height="52" rx="4" fill="#ebf8ff" stroke="#90cdf4" stroke-width="1" filter="url(#shadow)"/>
+  <text x="407" y="112" text-anchor="middle" font-size="10.5" font-weight="600" fill="#2c5282">GPT-4o</text>
+  <text x="407" y="126" text-anchor="middle" font-size="8.5" fill="#4a90b8">OpenAI</text>
+  <text x="407" y="138" text-anchor="middle" font-size="8" fill="#718096">23,346 words</text>
+
+  <rect x="210" y="152" width="125" height="52" rx="4" fill="#ebf8ff" stroke="#90cdf4" stroke-width="1" filter="url(#shadow)"/>
+  <text x="272" y="172" text-anchor="middle" font-size="10.5" font-weight="600" fill="#2c5282">Gemini 2.5 Pro</text>
+  <text x="272" y="186" text-anchor="middle" font-size="8.5" fill="#4a90b8">Google</text>
+  <text x="272" y="198" text-anchor="middle" font-size="8" fill="#718096">16,330 words</text>
+
+  <rect x="345" y="152" width="125" height="52" rx="4" fill="#ebf8ff" stroke="#90cdf4" stroke-width="1" filter="url(#shadow)"/>
+  <text x="407" y="172" text-anchor="middle" font-size="10.5" font-weight="600" fill="#2c5282">Grok 3</text>
+  <text x="407" y="186" text-anchor="middle" font-size="8.5" fill="#4a90b8">xAI</text>
+  <text x="407" y="198" text-anchor="middle" font-size="8" fill="#718096">2,169 words</text>
+
+  <!-- CN label -->
+  <rect x="205" y="222" width="165" height="22" rx="3" fill="#fff5f5" stroke="#feb2b2" stroke-width="0.8"/>
+  <text x="215" y="237" font-size="10" font-weight="600" fill="#c53030">CN</text>
+  <text x="237" y="237" font-size="9" fill="#c53030">2 models</text>
+
+  <!-- CN model boxes -->
+  <rect x="210" y="252" width="125" height="52" rx="4" fill="#fff5f5" stroke="#feb2b2" stroke-width="1" filter="url(#shadow)"/>
+  <text x="272" y="272" text-anchor="middle" font-size="10.5" font-weight="600" fill="#9b2c2c">DeepSeek R1</text>
+  <text x="272" y="286" text-anchor="middle" font-size="8.5" fill="#c53030">DeepSeek</text>
+  <text x="272" y="298" text-anchor="middle" font-size="8" fill="#718096">22,614 words</text>
+
+  <rect x="345" y="252" width="125" height="52" rx="4" fill="#fff5f5" stroke="#feb2b2" stroke-width="1" filter="url(#shadow)"/>
+  <text x="407" y="272" text-anchor="middle" font-size="10.5" font-weight="600" fill="#9b2c2c">Qwen Max</text>
+  <text x="407" y="286" text-anchor="middle" font-size="8.5" fill="#c53030">Alibaba</text>
+  <text x="407" y="298" text-anchor="middle" font-size="8" fill="#718096">11,024 words</text>
+
+  <!-- EU label -->
+  <rect x="205" y="322" width="165" height="22" rx="3" fill="#f0fff4" stroke="#9ae6b4" stroke-width="0.8"/>
+  <text x="215" y="337" font-size="10" font-weight="600" fill="#276749">EU</text>
+  <text x="235" y="337" font-size="9" fill="#276749">1 model</text>
+
+  <!-- EU model box -->
+  <rect x="210" y="352" width="125" height="52" rx="4" fill="#f0fff4" stroke="#9ae6b4" stroke-width="1" filter="url(#shadow)"/>
+  <text x="272" y="372" text-anchor="middle" font-size="10.5" font-weight="600" fill="#276749">Mistral Large</text>
+  <text x="272" y="386" text-anchor="middle" font-size="8.5" fill="#38a169">Mistral AI</text>
+  <text x="272" y="398" text-anchor="middle" font-size="8" fill="#718096">8,261 words</text>
+
+  <!-- Total at bottom -->
+  <rect x="210" y="418" width="260" height="28" rx="4" fill="#edf2f7" stroke="#cbd5e0" stroke-width="0.8"/>
+  <text x="340" y="437" text-anchor="middle" font-size="10" font-weight="600" fill="#4a5568">7 independent responses</text>
+
+  <!-- Arrow from models to corpus -->
+  <line x1="490" y1="255" x2="520" y2="255" stroke="#4a5568" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- ===== CORPUS ===== -->
+  <rect x="530" y="160" width="100" height="190" rx="6" fill="url(#corpusGrad)" stroke="#90cdf4" stroke-width="1.5" filter="url(#shadow)"/>
+  <!-- Stack effect -->
+  <rect x="534" y="170" width="88" height="12" rx="2" fill="white" stroke="#a0aec0" stroke-width="0.5" opacity="0.7"/>
+  <rect x="534" y="186" width="88" height="12" rx="2" fill="white" stroke="#a0aec0" stroke-width="0.5" opacity="0.7"/>
+  <rect x="534" y="202" width="88" height="12" rx="2" fill="white" stroke="#a0aec0" stroke-width="0.5" opacity="0.7"/>
+  <rect x="534" y="218" width="88" height="12" rx="2" fill="white" stroke="#a0aec0" stroke-width="0.5" opacity="0.7"/>
+  <rect x="534" y="234" width="88" height="12" rx="2" fill="white" stroke="#a0aec0" stroke-width="0.5" opacity="0.7"/>
+  <rect x="534" y="250" width="88" height="12" rx="2" fill="white" stroke="#a0aec0" stroke-width="0.5" opacity="0.7"/>
+  <rect x="534" y="266" width="88" height="12" rx="2" fill="white" stroke="#a0aec0" stroke-width="0.5" opacity="0.7"/>
+
+  <text x="580" y="305" text-anchor="middle" font-size="13" font-weight="700" fill="#2c5282">114,000</text>
+  <text x="580" y="320" text-anchor="middle" font-size="11" font-weight="600" fill="#2c5282">words</text>
+  <text x="580" y="340" text-anchor="middle" font-size="9" fill="#4a5568">structured</text>
+  <text x="580" y="352" text-anchor="middle" font-size="9" fill="#4a5568">corpus</text>
+
+  <!-- Arrow from corpus to analysis -->
+  <line x1="635" y1="255" x2="670" y2="255" stroke="#4a5568" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- ===== 4-STEP ANALYTICAL PROCEDURE ===== -->
+  <rect x="680" y="55" width="410" height="400" rx="6" fill="#fafbfc" stroke="#cbd5e0" stroke-width="1"/>
+
+  <!-- Step 1 -->
+  <rect x="700" y="72" width="370" height="70" rx="5" fill="white" stroke="#a0aec0" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="700" y="72" width="36" height="70" rx="5" fill="#4a5568"/>
+  <rect x="718" y="72" width="18" height="70" fill="#4a5568"/>
+  <text x="718" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="white">1</text>
+  <text x="755" y="95" font-size="11" font-weight="700" fill="#2d3748">Extraction</text>
+  <text x="755" y="112" font-size="9" fill="#4a5568">Convert outputs to structured text.</text>
+  <text x="755" y="126" font-size="9" fill="#4a5568">Extract predictions per cell:</text>
+  <text x="755" y="138" font-size="8.5" fill="#718096">Vertical x Stage x Effect Order x Scenario</text>
+
+  <!-- Step 2 -->
+  <rect x="700" y="155" width="370" height="70" rx="5" fill="white" stroke="#a0aec0" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="700" y="155" width="36" height="70" rx="5" fill="#4a5568"/>
+  <rect x="718" y="155" width="18" height="70" fill="#4a5568"/>
+  <text x="718" y="195" text-anchor="middle" font-size="14" font-weight="700" fill="white">2</text>
+  <text x="755" y="178" font-size="11" font-weight="700" fill="#2d3748">Deductive Coding</text>
+  <text x="755" y="195" font-size="9" fill="#4a5568">Four dimensions: core claim, specificity,</text>
+  <text x="755" y="209" font-size="9" fill="#4a5568">causal chain quality, thematic category</text>
+
+  <!-- Step 3 -->
+  <rect x="700" y="238" width="370" height="82" rx="5" fill="white" stroke="#a0aec0" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="700" y="238" width="36" height="82" rx="5" fill="#4a5568"/>
+  <rect x="718" y="238" width="18" height="82" fill="#4a5568"/>
+  <text x="718" y="284" text-anchor="middle" font-size="14" font-weight="700" fill="white">3</text>
+  <text x="755" y="261" font-size="11" font-weight="700" fill="#2d3748">Consensus Scoring</text>
+  <text x="755" y="278" font-size="9" fill="#4a5568">High Consensus (HC): 5+ / 7 models agree</text>
+  <text x="755" y="292" font-size="9" fill="#4a5568">Moderate Consensus (MC): 3-4 / 7</text>
+  <text x="755" y="306" font-size="9" fill="#4a5568">Blind Spot (BS): 1-2 / 7</text>
+
+  <!-- Step 4 -->
+  <rect x="700" y="333" width="370" height="70" rx="5" fill="white" stroke="#a0aec0" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="700" y="333" width="36" height="70" rx="5" fill="#4a5568"/>
+  <rect x="718" y="333" width="18" height="70" fill="#4a5568"/>
+  <text x="718" y="373" text-anchor="middle" font-size="14" font-weight="700" fill="white">4</text>
+  <text x="755" y="356" font-size="11" font-weight="700" fill="#2d3748">Geopolitical Divergence Mapping</text>
+  <text x="755" y="373" font-size="9" fill="#4a5568">Systematic comparison across model families</text>
+  <text x="755" y="387" font-size="9" fill="#4a5568">(US / CN / EU) for origin-traceable patterns</text>
+
+  <!-- Connecting arrows between steps -->
+  <line x1="885" y1="142" x2="885" y2="155" stroke="#a0aec0" stroke-width="1" marker-end="url(#arrowhead-white)"/>
+  <line x1="885" y1="225" x2="885" y2="238" stroke="#a0aec0" stroke-width="1" marker-end="url(#arrowhead-white)"/>
+  <line x1="885" y1="320" x2="885" y2="333" stroke="#a0aec0" stroke-width="1" marker-end="url(#arrowhead-white)"/>
+
+  <!-- Arrow from analysis to results -->
+  <line x1="1095" y1="255" x2="1130" y2="255" stroke="#4a5568" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- ===== RESULTS ===== -->
+  <!-- Convergence Zones -->
+  <rect x="1140" y="65" width="240" height="110" rx="6" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1260" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#2c5282">Convergence Zones</text>
+  <line x1="1160" y1="100" x2="1360" y2="100" stroke="#90cdf4" stroke-width="0.5"/>
+  <text x="1260" y="118" text-anchor="middle" font-size="9" fill="#4a5568">6 high-consensus themes</text>
+  <text x="1260" y="133" text-anchor="middle" font-size="9" fill="#4a5568">where 5+ models agree</text>
+  <text x="1260" y="150" text-anchor="middle" font-size="8.5" fill="#718096">Labor bifurcation, Infrastructure,</text>
+  <text x="1260" y="163" text-anchor="middle" font-size="8.5" fill="#718096">Disintermediation, Regulation, ...</text>
+
+  <!-- Contested Futures -->
+  <rect x="1140" y="190" width="240" height="100" rx="6" fill="#fefcbf" stroke="#d69e2e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1260" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#744210">Contested Futures</text>
+  <line x1="1160" y1="225" x2="1360" y2="225" stroke="#ecc94b" stroke-width="0.5"/>
+  <text x="1260" y="243" text-anchor="middle" font-size="9" fill="#4a5568">Models split along</text>
+  <text x="1260" y="258" text-anchor="middle" font-size="9" fill="#4a5568">identifiable geopolitical lines</text>
+  <text x="1260" y="278" text-anchor="middle" font-size="8.5" fill="#718096">Healthcare pace, Compute as currency</text>
+
+  <!-- Blind Spots -->
+  <rect x="1140" y="305" width="240" height="100" rx="6" fill="#fff5f5" stroke="#fc8181" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1260" y="332" text-anchor="middle" font-size="12" font-weight="700" fill="#9b2c2c">Blind Spots</text>
+  <line x1="1160" y1="340" x2="1360" y2="340" stroke="#feb2b2" stroke-width="0.5"/>
+  <text x="1260" y="358" text-anchor="middle" font-size="9" fill="#4a5568">Unique predictions from</text>
+  <text x="1260" y="373" text-anchor="middle" font-size="9" fill="#4a5568">1-2 models only</text>
+  <text x="1260" y="393" text-anchor="middle" font-size="8.5" fill="#718096">AI Religion, Model Collapse,</text>
+  <text x="1260" y="406" text-anchor="middle" font-size="8.5" fill="#718096">Digital Consciousness</text>
+
+  <!-- Caption -->
+  <text x="700" y="490" font-size="10" fill="#4a5568">
+    <tspan font-weight="700">Figure 1.</tspan>
+    <tspan> Multi-LLM Delphi Research Design. A standardized prompt instrument is submitted to seven frontier LLMs spanning</tspan>
+  </text>
+  <text x="700" y="505" font-size="10" fill="#4a5568">three geopolitical regions (US, CN, EU), generating a 114,000-word corpus. Four-step analytical procedure produces</text>
+  <text x="700" y="520" font-size="10" fill="#4a5568">convergence zones, contested futures, and blind spots.</text>
+</svg>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Theme,Category,Claude,GPT,Gemini,Grok,DeepSeek,Qwen,Mistral,Total,Consensus_Level,Notes
+Labor Market Bifurcation,Labor Market Displacement/Bifurcation,1,1,1,1,1,1,1,7,HC,Universal agreement across all models; strongest convergence point
+Infrastructure Bottleneck,Infrastructure Bottleneck/Compute,1,1,1,0,1,1,1,6,HC,Grok did not substantively address energy/compute constraints
+Regulatory Divergence,Regulatory Response/Governance,1,1,1,1,1,0,1,6,HC,Qwen did not address regulatory fragmentation across jurisdictions
+Disintermediation,Market Concentration/Platform Dynamics,1,1,1,0,1,1,0,5,HC,Grok and Mistral did not discuss displacement of traditional intermediaries
+Trust Premium,Identity/Trust Transformation,1,1,1,0,1,0,1,5,HC,Grok and Qwen did not address authenticity/trust restructuring
+AI Feedback Concentration,Market Concentration/Platform Dynamics,1,1,1,1,0,1,0,5,HC,DeepSeek and Mistral did not discuss AI-driven market concentration loops
+Autonomous Economic Agents,Market Concentration/Platform Dynamics,1,1,1,0,0,1,0,4,MC,Only 4 models predicted emergence of autonomous AI economic actors
+Compute as Currency,Infrastructure Bottleneck/Compute,0,1,1,1,0,1,0,4,MC,Claude and DeepSeek did not frame compute as economic exchange medium
+Bio-Digital Convergence,Identity/Trust Transformation,1,0,1,0,1,0,0,3,MC,Minority theme; convergence of biological and digital systems
+Apprenticeship Crash,Labor Market Displacement/Bifurcation,1,0,0,0,0,0,0,1,BS,Only Claude predicted collapse of traditional apprenticeship pathways
+AI Religion,Identity/Trust Transformation,1,0,0,0,0,0,0,1,BS,Only Claude predicted emergence of AI-related spiritual/religious phenomena
