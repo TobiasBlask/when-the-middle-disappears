@@ -2,58 +2,108 @@
 
 **Author:** Tobias-Benedikt Blask, Harz University of Applied Sciences
 
+**Status:** Submitted to *Technological Forecasting and Social Change*
+
 ## About
 
-This repository contains the data, coding documentation, and analytical materials for the paper "When the Middle Disappears: Three Orders of AI-Driven Economic Transformation from a Multi-LLM Delphi Analysis." The study applies a two-round modified Delphi method using seven frontier large language models as structured surrogate expert panelists to map AI-driven economic transformation across eight industry verticals, four adoption stages, three bounding scenarios, and three orders of effects.
+This repository contains the complete data, analytical materials, and supplementary documentation for the paper "When the Middle Disappears: Three Orders of AI-Driven Economic Transformation from a Multi-LLM Delphi Analysis." The study applies a two-round Multi-LLM Delphi method using seven frontier large language models as structured panelists to map AI-driven economic transformation across eight GICS-aligned industry verticals, four adoption stages, three bounding scenarios, and three orders of effects.
 
 ## Repository Structure
 
 ```
 .
-├── README.md                          # This file
+├── README.md                              # This file
 ├── data/
-│   ├── codebook.md                    # Formal codebook with category definitions,
-│   │                                  # inclusion/exclusion criteria, and decision rules
-│   ├── consensus_matrix_r1.csv        # Round 1 consensus scoring (11 themes x 7 models)
-│   ├── consensus_matrix_r2.csv        # Round 2 consensus scoring after Delphi iteration
-│   ├── coding_examples.md            # Worked examples of the coding procedure
-│   └── prompts/
-│       ├── round1_prompt.txt          # Round 1 prompt description
-│       └── round2_prompt_template.txt # Round 2 prompt structure
-├── ModelAnswers_Input/                # Raw model responses (Round 1 + Round 2)
-└── outputs/                           # Analysis outputs, figures, and compiled paper
+│   ├── codebook.md                        # Formal codebook with category definitions,
+│   │                                      # inclusion/exclusion criteria, and decision rules
+│   ├── coding_examples.md                 # Worked examples of the coding procedure
+│   ├── consensus_matrix_r1.csv            # Round 1 consensus scoring (11 themes x 7 models)
+│   ├── consensus_matrix_r2.csv            # Round 2 consensus scoring after Delphi feedback
+│   ├── figure_specifications.md           # PaperBanana prompts for all generated figures
+│   ├── prompts/
+│   │   ├── round1_prompt.txt              # Round 1 prompt instrument
+│   │   └── round2_prompt_template.txt     # Round 2 prompt structure with feedback template
+│   └── raw_outputs/
+│       ├── round1/                        # Round 1 model responses (Markdown, converted from .docx)
+│       │   ├── claude.md
+│       │   ├── gpt54.md
+│       │   ├── gemini.md
+│       │   ├── grok.md
+│       │   ├── deepseek.md
+│       │   ├── qwen.md
+│       │   └── mistral.md
+│       └── round2/                        # Round 2 model responses (Markdown, converted from .docx)
+│           ├── claude.md
+│           ├── gpt54.md
+│           ├── gemini.md
+│           ├── grok.md
+│           ├── deepseek.md
+│           ├── qwen.md
+│           └── mistral.md
+├── ModelAnswers_Input/                    # Original model responses (.docx format)
+├── outputs/
+│   ├── figures/                           # All paper figures (PNG)
+│   ├── latex/
+│   │   ├── paper.tex                      # Full manuscript (LaTeX source)
+│   │   ├── paper_anonymous.tex            # Double-blind anonymized version
+│   │   ├── references.bib                 # Full bibliography
+│   │   ├── references_anonymous.bib       # Anonymized bibliography
+│   │   └── figures/                       # Figures as used by LaTeX
+│   └── submission/
+│       └── cover_letter.tex               # Cover letter to editors
 ```
 
-## Reproducing the Analysis
+## Data and Materials
 
-### 1. Review the Codebook
+### Raw Model Outputs
 
-Start with `data/codebook.md` to understand the six thematic categories and the consensus scoring rules (HC/MC/CF/BS) used throughout the analysis.
+The `data/raw_outputs/` directory contains the complete, unedited responses from all seven models in both Delphi rounds, converted from the original .docx files to Markdown for readability. The original .docx files are preserved in `ModelAnswers_Input/`.
 
-### 2. Examine the Coding Procedure
+| Model | Round 1 Words | Round 2 Words |
+|-------|--------------|--------------|
+| Claude Opus 4.6 | 30,613 | ~3,000 |
+| GPT-5.4 | 23,346 | ~4,500 |
+| DeepSeek R2 | 22,614 | ~4,500 |
+| Gemini 3.1 Pro | 16,330 | ~2,200 |
+| Qwen 4.5 Max | 11,024 | ~2,700 |
+| Mistral Large 3 | 8,261 | ~4,700 |
+| Grok 4.2 | 2,169 | ~1,700 |
+| **Total** | **~114,000** | **~23,000** |
 
-See `data/coding_examples.md` for worked examples showing how raw model text was classified into thematic categories, including borderline cases and exclusion decisions.
+### Codebook and Coding Procedure
 
-### 3. Inspect the Consensus Matrices
+- `data/codebook.md`: Formal codebook with six thematic categories, inclusion/exclusion criteria, consensus scoring rules (HC/MC/CF/BS), and decision rules for borderline cases.
+- `data/coding_examples.md`: Worked examples showing how raw model text was classified into thematic categories.
 
-- `data/consensus_matrix_r1.csv` contains the Round 1 binary scoring (1 = theme substantively present, 0 = absent) for each of the 7 models across 11 identified themes.
-- `data/consensus_matrix_r2.csv` contains the Round 2 scoring after models received anonymized Round 1 consensus summaries and were prompted to revise, adopt, contest, or extend.
+### Consensus Matrices
 
-### 4. Review Prompts
+- `data/consensus_matrix_r1.csv`: Round 1 binary scoring (1 = theme substantively present, 0 = absent) for 7 models across 11 themes.
+- `data/consensus_matrix_r2.csv`: Round 2 scoring after models received anonymized Round 1 consensus summaries.
 
-The `data/prompts/` directory describes the prompt structure used in each Delphi round. Full prompt texts are available in the paper's supplementary materials.
+### Prompt Instruments
+
+- `data/prompts/round1_prompt.txt`: The structured prompt used for Round 1 data collection.
+- `data/prompts/round2_prompt_template.txt`: The Round 2 prompt template including feedback structure.
+
+### Figure Generation
+
+- `data/figure_specifications.md`: Complete PaperBanana prompts and specifications used to generate all figures, documenting the exact instructions and iteration history for each figure.
 
 ## Models Used
 
-| Model | Provider | HQ Region | Role |
-|-------|----------|-----------|------|
-| Claude Opus 4.6 | Anthropic | US | Safety-aligned, longest output |
-| GPT-5.4 Pro | OpenAI | US | Data-anchored reasoning |
-| Gemini 3.1 Pro | Google DeepMind | US | Provocative scenarios |
-| Grok 4.2 | xAI | US | Contrarian, terse |
-| DeepSeek R2 | DeepSeek | China | Most rigorous causal chains |
-| Qwen 4.5 Max | Alibaba Cloud | China | Industrial policy lens |
-| Mistral Large 3 | Mistral AI | EU (France) | Regulatory-equity focus |
+| Model | Provider | HQ Region | Data Collection Date |
+|-------|----------|-----------|---------------------|
+| Claude Opus 4.6 | Anthropic | US | March 14-15, 2026 |
+| GPT-5.4 Pro | OpenAI | US | March 14-15, 2026 |
+| Gemini 3.1 Pro | Google DeepMind | US | March 14-15, 2026 |
+| Grok 4.2 | xAI | US | March 14-15, 2026 |
+| DeepSeek R2 | DeepSeek | China | March 14-15, 2026 |
+| Qwen 4.5 Max | Alibaba Cloud | China | March 14-15, 2026 |
+| Mistral Large 3 | Mistral AI | EU (France) | March 14-15, 2026 |
+
+## Transparency Note
+
+This manuscript was produced using the [Open Academic Paper Machine](https://github.com/TobiasBlask/open-paper-machine), an AI-assisted research workflow tool. The author conceived, designed, and directed the entire study; AI tools were used for prose drafting and production under author orchestration. Full disclosure is provided in the manuscript's AI Declaration section.
 
 ## License
 
@@ -65,9 +115,11 @@ You are free to share and adapt this material for any purpose, provided appropri
 
 ```bibtex
 @article{blask2026middle,
-  title={When the Middle Disappears: Three Orders of AI-Driven Economic Transformation from a Multi-LLM Delphi Analysis},
+  title={When the Middle Disappears: Three Orders of AI-Driven Economic Transformation
+         from a Multi-LLM Delphi Analysis},
   author={Blask, Tobias-Benedikt},
   journal={Technological Forecasting and Social Change},
-  year={2026}
+  year={2026},
+  note={Under review}
 }
 ```
