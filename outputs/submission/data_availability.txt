@@ -1,0 +1,5 @@
+Data Availability Statement
+
+The analytical materials supporting this study — including the formal codebook with category definitions and decision rules, Round 1 and Round 2 consensus scoring matrices (CSV), worked coding examples, and prompt instruments — are available in the supplementary repository at: https://github.com/TobiasBlask/when-the-middle-disappears
+
+The raw model outputs (Round 1 and Round 2) are available from the corresponding author upon request.

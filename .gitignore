@@ -37,3 +37,26 @@ venv/
 
 # OS files
 Thumbs.db
+
+# Claude Code
+.claude/
+
+# PaperBanana run artifacts (intermediate)
+outputs/run_*/
+
+# Compiled PDFs (regenerable from .tex)
+*.pdf
+*.spl
+
+# Intermediate/duplicate outputs
+outputs/outputs/
+outputs/latex/outputs/
+outputs/paper.tex
+outputs/paper_brief.md
+outputs/metadata.json
+package.json
+package-lock.json
+run_research.py
+
+# Figure iteration drafts
+outputs/figures/fig*_v*.png
