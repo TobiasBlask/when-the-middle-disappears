@@ -40,7 +40,6 @@ This repository contains the complete data, analytical materials, and supplement
 │           ├── deepseek.md
 │           ├── qwen.md
 │           └── mistral.md
-├── ModelAnswers_Input/                    # Original model responses (.docx format)
 ├── outputs/
 │   ├── figures/                           # All paper figures (PNG)
 │   ├── latex/
@@ -57,7 +56,7 @@ This repository contains the complete data, analytical materials, and supplement
 
 ### Raw Model Outputs
 
-The `data/raw_outputs/` directory contains the complete, unedited responses from all seven models in both Delphi rounds, converted from the original .docx files to Markdown for readability. The original .docx files are preserved in `ModelAnswers_Input/`.
+The `data/raw_outputs/` directory contains the complete, unedited responses from all seven models in both Delphi rounds, converted from the original .docx exports to Markdown for readability and version control.
 
 | Model | Round 1 Words | Round 2 Words |
 |-------|--------------|--------------|
