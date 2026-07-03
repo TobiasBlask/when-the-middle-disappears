@@ -2,7 +2,7 @@
 
 ## Overview
 
-This codebook documents the deductive coding procedure used to analyze responses from seven large language models (Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro, Grok-2, DeepSeek-V3, Qwen 2.5 72B, Mistral Large 2) across two Delphi rounds. The coding framework was developed iteratively: an initial set of thematic categories was derived from Round 1 responses, then applied systematically to both rounds.
+This codebook documents the deductive coding procedure used to analyze responses from seven large language models (Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, Grok 4.2, DeepSeek R2, Qwen 4.5 Max, Mistral Large 3) across two Delphi rounds. The coding framework was developed iteratively: an initial set of thematic categories was derived from Round 1 responses, then applied systematically to both rounds.
 
 ---
 

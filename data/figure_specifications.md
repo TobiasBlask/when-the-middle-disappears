@@ -62,10 +62,10 @@ BETWEEN MIDDLE AND TOP LAYER: Another single centered upward-pointing arrow (↑
 TOP LAYER (dark navy color, labeled "3rd Order: Systemic Transformation, 2033-2040+"):
 Five prediction boxes:
 - "Regulatory Divergence - Three Blocs" with green circle "6/7"
-- "THE APPRENTICESHIP CRASH - Judgment Famine" in prominent highlighted box with green circle "7/7"
+- "THE APPRENTICESHIP CRASH - Judgment Famine" in prominent highlighted box with small indicators "1/7 → 7/7"
 - "Trust Premium & Human Verification Economy" with orange circle "5/7"
 - "Biological-Digital Convergence" with yellow circle "3/7"
-- "AI Religion / Spiritual Response" with small indicators "1/7 → 5/7"
+- "AI Religion / Spiritual Response" with small indicators "1/7 → 6/7"
 
 RIGHT SIDE: Timeline arrow showing "2024-2026" at bottom, "2027-2032" in middle, "2033-2040+" at top.
 
@@ -500,7 +500,7 @@ COLUMN 3 — "Organization (How are firms structured?)"
 Top blue box [WIDE]: "Survives: Strategic Leadership" — C-suite, board-level governance; AI orchestration & oversight; Stakeholder relationships; Regulatory navigation
 Middle amber box [NARROW]: "Compressed: Middle Management" — Department heads (routine oversight); Project managers (standard workflows); Regional managers, coordinators; Reporting & analytics managers
 Bottom green box [WIDE]: "Survives: Frontline Operations" — Customer-facing specialists; Skilled trades, technicians; On-site service delivery; Crisis response teams
-Label: "Consensus: 6/7"
+Label: "Consensus: 5/7"
 
 Thin downward arrows connect top box to middle box and middle box to bottom box in each column. The arrows narrow from wide to narrow (top to middle) and expand from narrow to wide (middle to bottom), reinforcing the hourglass/squeeze visual metaphor.
 
@@ -594,7 +594,7 @@ GREEN BOX - "HIGH CONSENSUS (HC: 5-7/7)":
 - Autonomous Economic Agents (7/7)
 - Compute as Strategic Reserve (6-7/7)
 - Apprenticeship Crash (7/7)
-- AI Religion (5-6/7)
+- AI Religion (6/7)
 
 ORANGE BOX - "MODERATE CONSENSUS (MC: 3-4/7)":
 - Biological-Digital Convergence (3-4/7)
@@ -606,7 +606,7 @@ FLOWS between left and right:
 - Teal/blue thick flow: 6 HC themes maintained or strengthened to 7/7 (from green to green). Label: "6 themes maintained or strengthened to 7/7"
 - Orange flow: 2 MC themes (Autonomous Agents, Compute) upgraded to HC. Label: "2 themes upgraded to high consensus"
 - Red/coral dramatic flow: Apprenticeship Crash from BS (1/7) to HC (7/7). Label: "1/7 → 7/7" and marked as "MOST DRAMATIC SHIFT"
-- Pink flow: AI Religion from BS (1/7) to HC (5-6/7). Label: "1/7 → 5-6/7"
+- Pink flow: AI Religion from BS (1/7) to HC (6/7). Label: "1/7 → 6/7"
 - Gray/muted flow: Biological-Digital Convergence stays in MC. Label: "Resistant to convergence pressure"
 
 BOTTOM LEFT caveat: "Caveat: Strong convergence may partly reflect LLM acquiescence bias (see Section 4.5.5)"

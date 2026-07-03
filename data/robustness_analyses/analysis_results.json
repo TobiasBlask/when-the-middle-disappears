@@ -1,0 +1,146 @@
+{
+  "inter_coder_reliability": {
+    "n_independent_coders": 4,
+    "coding_scheme": "paper's own codebook (data/codebook.md), binary substantive-vs-not, 77 cells (11 themes x 7 models)",
+    "mean_pairwise_kappa_all_coders": 0.601,
+    "kappa_range": [
+      0.307,
+      0.826
+    ],
+    "mean_kappa_among_independent_coders": 0.712,
+    "mean_kappa_paper_vs_independent": 0.435,
+    "pairwise": [
+      {
+        "a": "paper",
+        "b": "kernel",
+        "kappa": 0.307
+      },
+      {
+        "a": "paper",
+        "b": "ext0",
+        "kappa": 0.521
+      },
+      {
+        "a": "paper",
+        "b": "ext1",
+        "kappa": 0.44
+      },
+      {
+        "a": "paper",
+        "b": "ext2",
+        "kappa": 0.472
+      },
+      {
+        "a": "kernel",
+        "b": "ext0",
+        "kappa": 0.648
+      },
+      {
+        "a": "kernel",
+        "b": "ext1",
+        "kappa": 0.676
+      },
+      {
+        "a": "kernel",
+        "b": "ext2",
+        "kappa": 0.704
+      },
+      {
+        "a": "ext0",
+        "b": "ext1",
+        "kappa": 0.736
+      },
+      {
+        "a": "ext0",
+        "b": "ext2",
+        "kappa": 0.826
+      },
+      {
+        "a": "ext1",
+        "b": "ext2",
+        "kappa": 0.684
+      }
+    ],
+    "interpretation": "Codebook is reliable (independent coders agree kappa~0.65-0.83); paper's own R1 coding lands at low-moderate agreement with independent recoding (mean kappa 0.44)."
+  },
+  "hc_robustness": {
+    "hc_zones_paper": [
+      "Labor Market Bifurcation",
+      "Infrastructure Bottleneck",
+      "Regulatory Divergence",
+      "Disintermediation",
+      "Trust Premium",
+      "AI Feedback Concentration"
+    ],
+    "hc_zones_independent_majority": [
+      "Labor Market Bifurcation",
+      "Infrastructure Bottleneck",
+      "Regulatory Divergence",
+      "Disintermediation",
+      "Trust Premium",
+      "Autonomous Economic Agents",
+      "Compute as Currency"
+    ],
+    "robust_both": [
+      "Disintermediation",
+      "Infrastructure Bottleneck",
+      "Labor Market Bifurcation",
+      "Regulatory Divergence",
+      "Trust Premium"
+    ],
+    "paper_only_not_replicated": [
+      "AI Feedback Concentration"
+    ],
+    "level_flips": 4,
+    "note": "5 of 6 headline HC zones replicate under 4-coder independent consensus; independent coders find MORE consensus overall (7 HC), so paper's claims are conservative."
+  },
+  "threshold_sensitivity": {
+    "hc_at_4of7": 8,
+    "hc_at_5of7": 6,
+    "hc_at_6of7": 3,
+    "hc_at_7of7": 1
+  },
+  "threshold_detail": {
+    "4": [
+      "Labor Market Bifurcation",
+      "Infrastructure Bottleneck",
+      "Regulatory Divergence",
+      "Disintermediation",
+      "Trust Premium",
+      "AI Feedback Concentration",
+      "Autonomous Economic Agents",
+      "Compute as Currency"
+    ],
+    "5": [
+      "Labor Market Bifurcation",
+      "Infrastructure Bottleneck",
+      "Regulatory Divergence",
+      "Disintermediation",
+      "Trust Premium",
+      "AI Feedback Concentration"
+    ],
+    "6": [
+      "Labor Market Bifurcation",
+      "Infrastructure Bottleneck",
+      "Regulatory Divergence"
+    ],
+    "7": [
+      "Labor Market Bifurcation"
+    ]
+  },
+  "dependence_analysis": {
+    "source": "authoritative consensus_matrix_r1.csv (binary substantive coding)",
+    "within_US_bloc_mean_agreement": 0.621,
+    "within_CN_bloc_mean_agreement": 0.455,
+    "cross_bloc_mean_agreement": 0.617,
+    "highest_pair": "GPT-Gemini 0.91 (both US)",
+    "lowest_pair": "Claude-Grok 0.27 (both US)",
+    "permutation_p_convergence_exceeds_marginal_chance": 0.32,
+    "interpretation": "Within-US agreement (0.62) equals cross-bloc (0.62); the highest AND lowest agreeing pairs are both same-bloc (US). Shared provenance does not create a dependence structure that inflates consensus. The permutation test is underpowered (p=0.32, 11 themes, high marginals) and cannot reject that convergence matches independent base rates \u2014 reported honestly."
+  },
+  "data_integrity_flags": {
+    "codebook_model_names_stale": "data/codebook.md lists 2024-era models (Claude 3.5 Sonnet, GPT-4o, Gemini 1.5, Grok-2, DeepSeek-V3, Qwen2.5, Mistral Large 2); paper claims 2026 frontier models (Claude Opus 4.6, GPT-5.4, etc.)",
+    "figure4_vs_table3_mismatch": "Figure 4 renders several cells inconsistently with consensus_matrix_r1.csv/Table 3 (e.g. Concentration shown 4/7 in fig vs 5/7 in data; Infrastructure Grok half-mark; apprenticeship half-mark on GPT vs data=Claude-only).",
+    "pilot_outputs_in_outputs_dir": "outputs/*_output.md are an earlier pilot run (grok-3, dated 2026-03-14) with different word counts; authoritative corpus is data/raw_outputs/round1 (116,082 words, matches paper's ~114k)."
+  }
+}

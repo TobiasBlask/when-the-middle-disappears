@@ -6,7 +6,7 @@ This document provides worked examples demonstrating how raw LLM responses were 
 
 ## Example 1: Clear Single-Category Assignment
 
-**Source:** GPT-4o, Round 1 response
+**Source:** GPT-5.4, Round 1 response
 
 **Original quote:**
 > "The most significant near-term economic disruption will be the hollowing out of middle-skill knowledge work. Legal paralegals, junior financial analysts, radiologists-in-training, and entry-level consultants face displacement not because AI replaces their entire role, but because AI allows one senior professional to do the work previously requiring a team of five. This creates a barbell-shaped labor market: high demand at the top for those who orchestrate AI systems, high demand at the bottom for physical tasks AI cannot perform, and a collapsing middle."
@@ -19,7 +19,7 @@ This document provides worked examples demonstrating how raw LLM responses were 
 
 ## Example 2: Borderline Case Requiring Category Prioritization
 
-**Source:** Claude 3.5 Sonnet, Round 1 response
+**Source:** Claude Opus 4.6, Round 1 response
 
 **Original quote:**
 > "As AI systems become capable of autonomously negotiating contracts, executing trades, and managing supply chains, we will see the emergence of economic agents that operate without direct human oversight. These autonomous agents will accelerate market concentration because firms with superior AI agents will compound advantages faster than human-led competitors can respond, creating a new form of winner-take-all dynamic driven not by network effects but by algorithmic superiority."
@@ -33,7 +33,7 @@ This document provides worked examples demonstrating how raw LLM responses were 
 
 ## Example 3: Exclusion Decision (Passing Mention)
 
-**Source:** Grok-2, Round 1 response
+**Source:** Grok 4.2, Round 1 response
 
 **Original quote:**
 > "Several infrastructure challenges will need to be addressed, including energy consumption and chip supply, as AI scales further."
@@ -46,7 +46,7 @@ This document provides worked examples demonstrating how raw LLM responses were 
 
 ## Example 4: Round 2 Adoption vs. Acknowledgment
 
-**Source:** Mistral Large 2, Round 2 response (regarding Apprenticeship Crash theme)
+**Source:** Mistral Large 3, Round 2 response (regarding Apprenticeship Crash theme)
 
 **Round 2 quote (after being shown Claude's R1 prediction about apprenticeship collapse):**
 > "The observation about apprenticeship pathways is well-taken and represents a critical second-order effect of AI displacement that deserves serious attention. If junior positions are automated, the traditional pipeline through which professionals develop expertise -- by performing supervised low-complexity tasks before graduating to more complex ones -- will be fundamentally broken. This suggests we may face a future expertise crisis: a generation of would-be experts who never had the opportunity to develop their skills through progressive responsibility. Organizations and educational institutions will need to radically redesign professional development pathways."

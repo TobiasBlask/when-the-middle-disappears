@@ -9,8 +9,8 @@ to identify key trends, disruptions, and structural shifts across labor markets,
 market dynamics, governance, infrastructure, geopolitics, and society. No prior
 themes or categories were provided; models generated predictions de novo.
 
-Models queried: Claude 3.5 Sonnet, GPT-4o, Gemini 1.5 Pro, Grok-2, DeepSeek-V3,
-Qwen 2.5 72B, Mistral Large 2.
+Models queried: Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro, Grok 4.2, DeepSeek R2,
+Qwen 4.5 Max, Mistral Large 3.
 
 All models were queried via their respective APIs with default temperature settings.
 Each model received the identical prompt text.

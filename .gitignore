@@ -58,5 +58,22 @@ package.json
 package-lock.json
 run_research.py
 
-# Figure iteration drafts
-outputs/figures/fig*_v*.png
+# Pilot pipeline artifacts (pre-LaTeX draft stage, superseded by outputs/latex/ and outputs/submission/)
+outputs/*_output.md
+outputs/orchestration_log.md
+outputs/status_report.md
+outputs/framing.md
+outputs/positioning_analysis.md
+outputs/peer_review_simulation.md
+outputs/citation_verification.md
+outputs/consolidated_matrix.md
+outputs/draft.md
+outputs/simulated_reviews.md
+outputs/writing_analysis.md
+outputs/references.bib
+outputs/companion/
+outputs/figures/
+outputs/fig1_methodology.png
+outputs/fig2_consensus_heatmap.png
+outputs/fig3_geopolitical_divergence.png
+outputs/fig4_three_order_cascade.png
